@@ -10,6 +10,7 @@ export async function createApp(
   return await NestFactory.create(AppModule, new ExpressAdapter(expressApp));
 }
 
+// Use this code only when running on ECS
 /*async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   await app.listen(3000);
